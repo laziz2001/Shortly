@@ -25,7 +25,6 @@ body {
     line-height: 26px;
     background-color: #fff;
     color: var(--text-color);
-    overflow-x: hidden;
 }
 
 .container {
@@ -58,6 +57,18 @@ a {
 
 .button:active {
     opacity: 0.6;
+}
+
+.button--big {
+    padding: 18px 40px 16px;
+}
+
+.button--rectangle {
+    border-radius: 5px;
+}
+
+.button--rectangle-big {
+    border-radius: 10px;
 }
 
 img {
@@ -127,10 +138,16 @@ img {
 .site-header__login {
     display: block;
     margin-right: 20px;
+    font-weight: bold;
+}
+
+.site-header__login:hover {
+    color: var(--title-color);
 }
 
 .site-header__signup {
     display: block;
+    font-weight: bold;
 }
 
 
@@ -144,7 +161,11 @@ img {
     position: relative;
     display: flex;
     align-items: center;
+    height: 482px;
     margin-bottom: 200px;
+    background-image: url(../img/working_with_computer.svg);
+    background-repeat: no-repeat;
+    background-position: left calc(50% + 300px) top 10px;
 }
 
 .hero-container {
