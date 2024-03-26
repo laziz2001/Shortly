@@ -46,6 +46,8 @@ a {
     border: 0;
     padding: 8px 23px;
     border-radius: 50px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     background-color: var(--button--bg);
     color: var(--text-secondary-color);
     cursor: pointer;
@@ -66,6 +68,7 @@ a {
 
 .button--rectangle {
     border-radius: 5px;
+    min-width: 103px;
 }
 
 .button--rectangle-big {
@@ -334,6 +337,10 @@ select:-webkit-autofill:focus {
     margin-right: 24px;
     font-size: 20px;
     color: var(--button--bg);
+}
+
+.form-wrapper__copy-button--copied {
+    background-color: #3a3054;
 }
 
 
