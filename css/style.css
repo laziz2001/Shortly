@@ -49,6 +49,7 @@ a {
     background-color: var(--button--bg);
     color: var(--text-secondary-color);
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .button:hover {
@@ -73,6 +74,31 @@ a {
 
 img {
     display: block;
+}
+
+/* AUTOFILL - STYLES */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border-color: transparent;
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+
+/* PLACEHOLDER COLOR */
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder {
+    color: rgba(52, 49, 61);
+    opacity: 1;
 }
 
 
@@ -165,7 +191,7 @@ img {
     margin-bottom: 200px;
     background-image: url(../img/working_with_computer.svg);
     background-repeat: no-repeat;
-    background-position: left calc(50% + 300px) top 10px;
+    background-position: left calc(50% + 476px) top 1px;
 }
 
 .hero-container {
@@ -199,41 +225,50 @@ img {
 }
 
 
-.hero__img {
-    position: absolute;
-    top: 20px;
-    right: -100px;
+/* FORM WRAPPER */
+.form-wrapper {
+    position: relative;
+    background-color: #eff1f7;
 }
 
-.hero__info {
+.form-wrapper__inner {
+    display: flex;
+    justify-content: center;
+}
+
+.form {
     position: absolute;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     width: 1110px;
     height: 168px;
+    margin-top: -80px;
     margin-left: auto;
     margin-right: auto;
+    padding: 52px 64px;
     background-image: url(../img/Path.svg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    left: 50%;
-    bottom: -100%;
-    transform: translateX(-50%) translateY(-80%);
     z-index: 1;
 }
 
-.hero__input {
+.form__input-wrapper {
+    width: 100%;
+}
+
+.form__input {
     max-width: 769px;
     width: 100%;
     height: 64px;
     padding: 10px;
     margin-right: 20px;
     border-radius: 10px;
+    border: 0;
 }
 
-.hero__submit {
+.form__submit {
     max-width: 188px;
     height: 64px;
     padding: 8px 40px;
@@ -242,12 +277,71 @@ img {
     font-size: 20px;
 }
 
+.form__input:not(:focus):not(:placeholder-shown):invalid {
+    border-color: red;
+    color: red;
+}
+
+.form__error-msg {
+    display: none;
+}
+
+
+.form__input:not(:focus):not(:placeholder-shown):invalid ~ .form__error-msg {
+    display: block;
+    font-style: italic;
+    letter-spacing: 0.11px;
+    color: rgb(255, 126, 126);
+}
+
+
+
+.form-wrapper__inner-results {
+    display: none;
+    width: 100%;
+    margin-top: 108px;
+}
+
+.form-wrapper__inner-results-open {
+    display: block;
+}
+
+.form-wrapper__inner-result {
+    display: flex;
+    align-items: center;
+    padding: 18px 32px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.form-wrapper__inner-result:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.form-wrapper__orginal-link {
+    width: 100%;
+    margin-right: 24px;
+    font-size: 20px;
+    letter-spacing: 0.15px;
+    line-height: 36px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--title-color);
+}
+
+.form-wrapper__short-link {
+    margin-right: 24px;
+    font-size: 20px;
+    color: var(--button--bg);
+}
+
+
 /* Statistic */
 .statistic {
     position: relative;
     padding-top: 200px;
     padding-bottom: 100px;
-    background-color: #eff1f7;
 }
 
 .statistic-container {

@@ -48,50 +48,76 @@
             <div class="hero__blok container">
                 <div class="hero-container">
                     <div class="hero__main">
-                        <h2 class="hero__title">Esonboyev Elbek</h2>
+                        <h2 class="hero__title">More than just<br>shorter links</h2>
                         <p class="her__text">Build your brand's recognition and get detailed<br>insights on how your links are performing.</p>
                         <button class="hero__button button" type="button">Get Started</button>
                     </div>
                 </div>
             </div>
-            <div class="hero__info">
-                <input class="hero__input" type="email" name="email" placeholder="Shorten a link here..." required>
-                <button class="button hero__submit" type="submit">Shorten It!</button>
-            </div>
         </div>
 
+
+        <div class="form-wrapper">
+            <!-- FORM -->
+            <div class="form-wrapper__inner">
+                <form class="form-wrapper__inner-form form js-form-wrapper__inner" action="https://echo.htmlacademy.ru" method="POST">
+                    <div class="form__input-wrapper">
+                        <input class="form__input" type="url" name="url" placeholder="Shorten a link here..." required aria-label="URL input">
+                        <div class="form__error-msg">Please add a link</div>
+                    </div>
+                    <button class="button form__submit" type="submit">Shorten It!</button>
+                </form>
+                <div class="form-wrapper__inner-results container">
+                    <div class="form-wrapper__inner-result">
+                        <div class="form-wrapper__orginal-link">https://www.frontendmentor.io</div>
+                        <a class="form-wrapper__short-link" href="#">https://rel.ink/k4lKyk</a>
+                        <button class="button button--rectangle">Copy</button>
+                    </div>
+                    <div class="form-wrapper__inner-result">
+                        <div class="form-wrapper__orginal-link">https://twitter.com/frontendmentor</div>
+                        <a class="form-wrapper__short-link" href="#">https://rel.ink/gxOXp9</a>
+                        <button class="button button--rectangle">Copy</button>
+                    </div>
+                    <div class="form-wrapper__inner-result">
+                        <div class="form-wrapper__orginal-link">https://www.linkedin.com/company/frontend-mentor</div>
+                        <a class="form-wrapper__short-link" href="#">https://rel.ink/gob3X9</a>
+                        <button class="button button--rectangle">Copy</button>
+                    </div>
+                </div>
+            </div>
         <!-- Statistic -->
-        <div class="statistic">
-            <div class="statistic-container container">
-                <h1 class="statistic__title">Advanced Statistics</h1>
-                <p class="statistic__text">Track how your links are performing across the web with <br> our advanced statistics dashboard.</p>
-                <div class="statistic__line"></div>
-                <div class="statistic-blok">
-                    <!-- Business -->
-                    <div class="statistic-blok__content business">
-                        <div class="statistic-blok__logo">
-                            <img class="statistic-blok__img" src="img/busness.svg" alt="business logo" width="40" height="40">
+            <div class="statistic">
+                <div class="statistic-container container">
+                    <h1 class="statistic__title">Advanced Statistics</h1>
+                    <p class="statistic__text">Track how your links are performing across the web with <br> our advanced statistics dashboard.</p>
+                    <div class="statistic__line"></div>
+                    <div class="statistic-blok">
+                        <!-- Business -->
+                        <div class="statistic-blok__content business">
+                            <div class="statistic-blok__logo">
+                                <img class="statistic-blok__img" src="img/busness.svg" alt="business logo" width="40" height="40">
+                            </div>
+                            <h3 class="statistic-blok__title">Brand Recognition</h3>
+                            <p class="statistic-blok__text">Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content.</p>
                         </div>
-                        <h3 class="statistic-blok__title">Brand Recognition</h3>
-                        <p class="statistic-blok__text">Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content.</p>
-                    </div>
 
-                    <!-- Records -->
-                    <div class="statistic-blok__content records">
-                        <div class="statistic-blok__logo">
-                            <img class="statistic-blok__img" src="img/time.svg" alt="Records logo" width="40" height="40">
+                        <!-- Records -->
+                        <div class="statistic-blok__content records">
+                            <div class="statistic-blok__logo">
+                                <img class="statistic-blok__img" src="img/time.svg" alt="Records logo" width="40" height="40">
+                            </div>
+                            <h3 class="statistic-blok__title">Detailed Records</h3>
+                            <p class="statistic-blok__text">Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p>
                         </div>
-                        <h3 class="statistic-blok__title">Detailed Records</h3>
-                        <p class="statistic-blok__text">Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p>
-                    </div>
 
-                    <!-- Customize -->
-                    <div class="statistic-blok__content customize">
-                        <div class="statistic-blok__logo">
-                            <img class="statistic-blok__img" src="img/pens.svg" alt="Records logo" width="40" height="40">
+                        <!-- Customize -->
+                        <div class="statistic-blok__content customize">
+                            <div class="statistic-blok__logo">
+                                <img class="statistic-blok__img" src="img/pens.svg" alt="Records logo" width="40" height="40">
+                            </div>
+                            <h3 class="statistic-blok__title">Fully Customizable</h3>
+                            <p class="statistic-blok__text">Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
                         </div>
-                        <h3 class="statistic-blok__title">Fully Customizable</h3>
-                        <p class="statistic-blok__text">Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
                     </div>
                 </div>
             </div>
@@ -184,6 +210,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
 
 </body>
 </html>
