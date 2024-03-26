@@ -373,20 +373,31 @@ select:-webkit-autofill:focus {
     letter-spacing: 0.12px;
 }
 
-.statistic__line {
+/* .statistic__line {
     position: absolute;
     width: 800px;
     height: 10px;
     margin-top: 152px;
     border: 0;
     background-color: #2bd0d0;
-}
+} */
 
 .statistic-blok {
+    position: relative;
     display: flex;
     justify-content: space-between;
     margin-top: 44px;
     margin-bottom: 120px;
+}
+
+.statistic-blok::before {
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    margin-top: 152px;
+    border-radius: 5px;
+    background-color: #2bd0d0;
+    content: "";
 }
 
 .statistic-blok__content {

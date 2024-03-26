@@ -20,8 +20,13 @@ if (elFormWrapper) {
     if (evt.target.matches(".js-copy-short-button-link")) {
       // Cange button text
       evt.target.textContent = "Copied!";
-      //
+      //Change button bgcolor
       evt.target.classList.add("form-wrapper__copy-button--copied");
+
+      // Copy short link to clipboard
+      navigator.clipboard.writeText(
+        evt.target.previousElementSibling.textContent
+      );
 
       // Rest button text and class after 1 secund
       setTimeout(function () {
